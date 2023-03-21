@@ -1,0 +1,42 @@
+{
+  "name": "eruda-monitor",
+  "version": "1.0.0",
+  "main": "eruda-monitor.js",
+  "files": [
+    "eruda-monitor.js",
+    "eruda-monitor.js.map"
+  ],
+  "scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --mode development",
+    "build": "webpack --mode production",
+    "ci": "npm run lint && npm run build",
+    "lint": "eslint src/**/*.js"
+  },
+  "keywords": [
+    "eruda",
+    "plugin"
+  ],
+  "author": "",
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^3.4.2",
+    "eruda": "^2.11.3",
+    "eslint": "^8.36.0",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.3",
+    "licia": "^1.38.0",
+    "luna-performance-monitor": "^0.2.0",
+    "node-sass": "^8.0.0",
+    "postcss": "^8.4.21",
+    "postcss-class-prefix": "^0.3.0",
+    "postcss-loader": "^7.0.2",
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.12.0"
+  }
+}
