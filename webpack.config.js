@@ -40,6 +40,9 @@ module.exports = (env, argv) => {
   const config = {
     devtool: 'source-map',
     entry: './src/index.js',
+    resolve: {
+      mainFields: ['main', 'module']
+    },
     devServer: {
       static: {
         directory: path.join(__dirname, './')
