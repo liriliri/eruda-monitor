@@ -60,7 +60,10 @@ module.exports = (env, argv) => {
       rules: [
         {
           test: /\.js$/,
-          exclude: /node_modules/,
+          include: [
+            path.resolve(__dirname, './src'),
+            path.resolve(__dirname, './node_modules/luna-performance-monitor')
+          ],
           use: {
             loader: 'babel-loader',
             options: {
