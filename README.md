@@ -1,11 +1,11 @@
 # eruda-monitor
 
-Eruda plugin for xxx.
+Eruda plugin for fps and memory.
 
 ## Demo
 
 Browse it on your phone: 
-[https://eruda.liriliri.io/](https://eruda.liriliri.io/)
+[https://eruda.liriliri.io/?plugin=monitor](https://eruda.liriliri.io/?plugin=monitor)
 
 ## Install
 

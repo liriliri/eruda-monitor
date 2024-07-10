@@ -52,7 +52,7 @@ module.exports = function(eruda) {
       return eruda.util.evalCss.getCurTheme().accent
     }
     _getTheme() {
-      return isDarkTheme(eruda.get().config.get('theme')) ? 'dark' : 'light'
+      return eruda.util.isDarkTheme() ? 'dark' : 'light'
     }
     _initFps(el) {
       let frames = 0
@@ -113,22 +113,4 @@ module.exports = function(eruda) {
   }
 
   return new Monitor()
-}
-
-const darkThemes = [
-  'Dark',
-  'Material Oceanic',
-  'Material Darker',
-  'Material Palenight',
-  'Material Deep Ocean',
-  'Monokai Pro',
-  'Dracula',
-  'Arc Dark',
-  'Atom One Dark',
-  'Solarized Dark',
-  'Night Owl',
-]
-
-function isDarkTheme(theme) {
-  return contain(darkThemes, theme)
 }
