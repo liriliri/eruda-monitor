@@ -1,5 +1,5 @@
 const raf = require('licia/raf')
-const LunaPerformanceMonitor = require('luna-performance-monitor')
+const LunaPerformanceMonitor = require('luna-performance-monitor').default
 const now = require('licia/now')
 
 module.exports = function (eruda) {
@@ -16,12 +16,15 @@ module.exports = function (eruda) {
     }
     init($el, container) {
       super.init($el, container)
-      $el.html('<div class="eruda-fps"></div><div class="eruda-memory"></div>')
+      $el.html(
+        '<div class="eruda-fps"></div><div class="eruda-memory"></div><div class="eruda-dom-nodes"></div>'
+      )
 
       this._initFps($el.find('.eruda-fps').get(0))
       if (performance.memory) {
         this._initMemory($el.find('.eruda-memory').get(0))
       }
+      this._initDomNodes($el.find('.eruda-dom-nodes').get(0))
 
       eruda.get().config.on('change', this._onThemeChange)
     }
@@ -32,6 +35,7 @@ module.exports = function (eruda) {
       if (this._memoryMonitor) {
         this._memoryMonitor.start()
       }
+      this._domNodesMonitor.start()
     }
     hide() {
       super.hide()
@@ -40,6 +44,7 @@ module.exports = function (eruda) {
       if (this._memoryMonitor) {
         this._memoryMonitor.stop()
       }
+      this._domNodesMonitor.stop()
     }
     destroy() {
       eruda.get().config.off('change', this._onThemeChange)
@@ -94,6 +99,18 @@ module.exports = function (eruda) {
         },
       })
       this._memoryMonitor = memoryMonitor
+    }
+    _initDomNodes(el) {
+      const domNodesMonitor = new LunaPerformanceMonitor(el, {
+        title: 'DOM Nodes',
+        color: this._getColor(),
+        smooth: false,
+        theme: this._getTheme(),
+        data() {
+          return document.body.getElementsByTagName('*').length
+        },
+      })
+      this._domNodesMonitor = domNodesMonitor
     }
     _onThemeChange = (name) => {
       const fpsMonitor = this._fpsMonitor

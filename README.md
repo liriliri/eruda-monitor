@@ -10,7 +10,7 @@
 [ci-url]: https://github.com/liriliri/eruda-monitor/actions/workflows/main.yml 
 [license-image]: https://img.shields.io/npm/l/eruda-monitor.svg
 
-Eruda plugin for fps and memory.
+Eruda plugin for monitoring fps, memory and dom nodes.
 
 ## Demo
 
