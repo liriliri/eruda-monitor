@@ -1,6 +1,6 @@
 {
   "name": "eruda-monitor",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "eruda-monitor.js",
   "description": "Eruda plugin for fps and memory",
   "browserslist": [

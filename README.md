@@ -20,7 +20,7 @@ Browse it on your phone:
 ## Install
 
 ```bash
-npm install eruda-monitor --save
+npm install eruda-monitor --save-dev
 ```
 
 ```javascript
