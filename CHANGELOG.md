@@ -1,3 +1,7 @@
+## v1.1.2 (26 Jun 2025)
+
+* fix: dom nodes monitor theme
+
 ## v1.1.1 (8 Oct 2024)
 
 * fix: panel not scrollable

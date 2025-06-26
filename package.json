@@ -1,6 +1,6 @@
 {
   "name": "eruda-monitor",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "eruda-monitor.js",
   "description": "Eruda plugin for fps and memory",
   "browserslist": [
@@ -29,6 +29,7 @@
     "@babel/core": "^7.21.3",
     "@babel/plugin-transform-runtime": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
+    "@babel/runtime": "^7.27.6",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "css-loader": "^3.4.2",
@@ -36,7 +37,7 @@
     "es-check": "^7.2.1",
     "eslint": "^8.57.0",
     "licia": "^1.38.0",
-    "luna-performance-monitor": "^1.0.0",
+    "luna-performance-monitor": "^1.2.2",
     "postcss": "^8.4.21",
     "postcss-class-prefix": "^0.3.0",
     "postcss-loader": "^7.0.2",

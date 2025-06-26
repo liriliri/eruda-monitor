@@ -114,10 +114,15 @@ module.exports = function (eruda) {
     }
     _onThemeChange = (name) => {
       const fpsMonitor = this._fpsMonitor
+      const domNodesMonitor = this._domNodesMonitor
       const memoryMonitor = this._memoryMonitor
       if (name === 'theme') {
         const theme = this._getTheme()
         fpsMonitor.setOption({
+          color: this._getColor(),
+          theme,
+        })
+        domNodesMonitor.setOption({
           color: this._getColor(),
           theme,
         })
